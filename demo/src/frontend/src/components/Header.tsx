@@ -13,7 +13,7 @@ function Header() {
             <FaBrain />Employee
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/login">
             <FaSignInAlt />Login
           </Link>
@@ -22,7 +22,7 @@ function Header() {
           <Link to="/register">
             <FaUser />Register
           </Link>
-        </li>
+        </li> */}
       </ul>
     </header>
   )
