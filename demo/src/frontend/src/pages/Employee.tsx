@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
-import './App.css';
-
 import axios from 'axios';
 
 
@@ -22,12 +20,17 @@ function Employee() {
   Employees();
 
   return (
-    <div className="App">
-      {employees.map(employee => (
-        <div>
-          <h1>{employee.name}</h1>
-        </div>
-      ))}
+    <div>
+      <p>Notes for project</p>
+      <div>
+        {employees.map(employee => (
+          <div className="goal">
+            <h1>{employee.name}</h1>
+            <p>Hours worked: {employee.hours}</p>
+            <p>Brief description: {employee.project}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
