@@ -17,12 +17,10 @@ function Employee() {
   }
 
   const deleteEmployee = (employee: any) => {
-    const deleteEmployeeAsync = async () => {
-      const res = await axios.delete(`http://localhost:8080/api/v1/employee/${employee.id}`);
-      setUseEmployees(res.data);
-    }
-    
-    deleteEmployeeAsync()
+    fetch(`http://localhost:8080/api/v1/employee/${employee.id}`, {
+      method: 'DELETE',
+      headers: { "Content-Type": "application/json" }
+    })
   }
 
   useEffect(() => {
